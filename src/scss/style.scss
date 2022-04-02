@@ -1,0 +1,34 @@
+// Главный Sass файл
+
+// Fonts
+@import "fonts";
+
+// Vendors
+@import 'vendors/smart-grid';
+@import 'vendors/swiper';
+
+
+// base 
+@import 
+  'base/vars',
+  'base/reset';
+
+// themes
+@import 
+  'themes/theme';
+
+// components
+@import 
+    'components/buttons',
+    'components/sandwich',
+    'components/side-menu';
+
+// layout
+@import 
+    'layout/header',
+    'layout/intro',
+    'layout/footer';
+
+// pages
+@import 
+    'pages/home';

@@ -1,0 +1,13 @@
+.button {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+  background: $accent;
+  border-radius: 10px;
+  transition: 200ms ease;
+  cursor: pointer;
+  &--radius-50 {
+    border-radius: 50px;
+  }
+}
