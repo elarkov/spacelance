@@ -19,6 +19,10 @@ body {
 
 .wrapper {
   position: relative;
+  padding-bottom: 30px;
+  @include xl-block {
+    padding-bottom: 55px;
+  }
   &:before {
     content: '';
     position: absolute;

@@ -10726,6 +10726,7 @@ body {
 
 .wrapper {
   position: relative;
+  padding-bottom: 30px;
 }
 
 .no-webp .wrapper:before{
@@ -11395,6 +11396,7 @@ a {
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #FFFFFF;
 }
 
 .footer__bottom {
@@ -11816,6 +11818,10 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
+  .wrapper {
+    padding-bottom: 55px;
+  }
+
   .wrapper:before {
     height: 720px;
   }
