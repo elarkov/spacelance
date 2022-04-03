@@ -10966,7 +10966,7 @@ a {
 }
 
 .header {
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
 .logo {
@@ -11406,6 +11406,7 @@ a {
 }
 
 .footer-info__text {
+  max-width: 300px;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
