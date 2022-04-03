@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220401022508">
-    <title>Document</title>
+    <meta name="description" content="Spacelance. Powerful Freelance Marketplace System with ability to change the Users">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220403143102">
+    <title>Spacelance. Powerful Freelance Marketplace System with ability to change the Users</title>
   </head>
   <body>
     <div class="wrapper">
             <div class="overlay js-side-menu__overlay">
               <div class="side-menu js-side__menu" data-id="menu">
-                <div class="side-menu__top"><a class="logo side-menu__logo" href="#!"><img src="img/icons/logo.svg" alt=""></a><a class="side-menu__close js-side-menu__close" href="#!">Закрыть</a></div>
+                <div class="side-menu__top"><a class="logo side-menu__logo" href="#!"><img src="img/icons/logo.svg" alt=""></a>
+                  <button class="side-menu__close js-side-menu__close" type="button">Закрыть</button>
+                </div>
                 <ul class="menu side-menu__menu"> 
-                  <li class="menu__item"> <a href="">Home</a></li>
-                  <li class="menu__item"><a href="">Find work</a></li>
-                  <li class="menu__item"> <a href="">Find Freelancers</a></li>
-                  <li class="menu__item"> <a href="">Log In</a></li>
-                  <li class="menu__item"> <a href="">Sign Up</a></li>
-                </ul>
-                <button class="button button--radius-50 side-menu__button">Post a project</button>
+                  <li class="menu__item"> <a href="/">Home</a></li>
+                  <li class="menu__item"><a href="/find-work">Find work</a></li>
+                  <li class="menu__item"> <a href="/find-freelancers">Find Freelancers</a></li>
+                  <li class="menu__item"> <a href="/login">Log In</a></li>
+                  <li class="menu__item"> <a href="/sign-up">Sign Up</a></li>
+                </ul><a class="button button--radius-50 side-menu__button" href="/new_project">Post a project</a>
               </div>
               <div class="overlay__layer js-side-menu__close"></div>
             </div>
             <header class="header"> 
               <nav class="main-nav"> <a class="logo main-nav__logo" href=""> <img class="logo__pic" src="img/icons/logo.svg" alt=""></a>
                 <ul class="site-navigation main-nav__navigation"> 
-                  <li class="site-navigation__item is-active"> <a href="">Home </a></li>
-                  <li class="site-navigation__item"> <a href="">Find work</a></li>
-                  <li class="site-navigation__item"> <a href="">Find Freelancers</a></li>
-                  <li class="site-navigation__item"> <a href="">Log In</a></li>
-                  <li class="site-navigation__item"> <a href="">Sign Up</a></li>
-                </ul>
-                <button class="button button--radius-50 main-nav__button">Post a project</button>
+                  <li class="site-navigation__item"><a href="/">Home </a></li>
+                  <li class="site-navigation__item"> <a href="/find-work">Find work</a></li>
+                  <li class="site-navigation__item"> <a href="/find-freelancers">Find Freelancers</a></li>
+                  <li class="site-navigation__item"> <a href="/login">Log In</a></li>
+                  <li class="site-navigation__item"> <a href="/sign-up">Sign Up</a></li>
+                </ul><a class="button button--radius-50 main-nav__button" href="/new_project">Post a project</a>
                 <div class="sandwich main-nav__sandwich js-side-menu" data-id="menu">
                   <div class="sandwich__inner"></div>
                 </div>
@@ -44,19 +46,139 @@
                           <div class="intro__main"> 
                             <h1 class="intro__header">Are you looking for Freelancers?</h1>
                             <p class="intro__subtitle">Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice</p>
-                            <div class="intro__bottom"> 
-                              <button class="button intro__button">Hire a freelancer</button>
-                              <form class="search intro__search" action="#">
-                                <input class="search__input" type="text" placeholder="search freelance work">
-                                <button class="search__button" type="submit">Search</button>
+                            <div class="intro__bottom"> <a class="button intro__button" href="/find-freelancers">Hire a freelancer</a>
+                              <form class="search intro__search" action="#" method="get">
+                                <input class="search__input" type="text" name="search" placeholder="search freelance work">
+                                <button class="search__button" type="submit" disabled>Search</button>
                               </form>
+                            </div>
+                          </div>
+                          <ul class="intro-list"> 
+                            <li class="intro-list__item"> <picture><source srcset="img/picture/icon-1.webp" type="image/webp"><img class="intro-list__icon" src="img/picture/icon-1.png" alt=""></picture>
+                              <h3 class="intro-list__header">Create Account</h3>
+                              <p class="intro-list__text">First you have to create a account here</p>
+                            </li>
+                            <li class="intro-list__item"> <picture><source srcset="img/picture/icon-2.webp" type="image/webp"><img class="intro-list__icon" src="img/picture/icon-2.png" alt=""></picture>
+                              <h3 class="intro-list__header">Search work </h3>
+                              <p class="intro-list__text">Search the best freelance work here</p>
+                            </li>
+                            <li class="intro-list__item"> <picture><source srcset="img/picture/icon-3.webp" type="image/webp"><img class="intro-list__icon" src="img/picture/icon-3.png" alt=""></picture>
+                              <h3 class="intro-list__header">Save and apply</h3>
+                              <p class="intro-list__text">Apply or save and start your work</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      <section class="best"> 
+                        <div class="container best__container"> 
+                          <div class="best__info"> 
+                            <h2 class="best__header">Find The Best <span class="accent">Freelancers</span> Here</h2>
+                            <p class="best__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat bibendum ornare urna, cursus eget convallis. Feugiat imperdiet posuere justo, ultrices interdum sed orci nunc, mattis. Ipsum viverra viverra neque adipiscing arcu, quam dictum. Dui mi viverra dui, sit accumsan, tincidunt massa. Dui cras magnis.</p>
+                          </div>
+                          <div class="best-body"> <picture><source srcset="img/picture/girl.webp" type="image/webp"><img class="best-body__img" src="img/picture/girl.png" alt=""></picture>
+                            <div class="point"> 
+                              <div class="point__num">500+</div>
+                              <div class="point__text">freelancers</div>
+                            </div>
+                            <div class="point point--big">
+                              <div class="point__num">300+</div>
+                              <div class="point__text">freelance work Posted</div>
                             </div>
                           </div>
                         </div>
                       </section>
+                      <section class="works"> 
+                        <div class="container works__container"> 
+                          <p class="works__subtitle">The latest freelance work!</p>
+                          <h2 class="works__header">Recently Posted Works</h2>
+                          <div class="slider works__slider">
+                            <div class="swiper slider__swaiper" id="slider-1"> 
+                              <div class="swiper-wrapper slider__wrapper">
+                                <div class="swiper-slide slider__slide"> 
+                                  <div class="slider__item"> <picture><source srcset="img/picture/logo-design.webp" type="image/webp"><img class="slider__icon" src="img/picture/logo-design.png" alt=""></picture>
+                                    <h3 class="slider__title">Logo Design</h3>
+                                    <p class="slider__text">Need a professional logo with writing underneath for our jewellery company</p>
+                                    <div class="slider__bottom"> 
+                                      <p class="slider__price">Highest bid<br> $500</p><a class="slider__link" href="#!">Apply now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide slider__slide"> 
+                                  <div class="slider__item"> <picture><source srcset="img/picture/graphic-design.webp" type="image/webp"><img class="slider__icon" src="img/picture/graphic-design.png" alt=""></picture>
+                                    <h3 class="slider__title">Graphic Design</h3>
+                                    <p class="slider__text">We need a graphic designer with UI/UX skills for our Furniture company</p>
+                                    <div class="slider__bottom"> 
+                                      <p class="slider__price">Highest bid<br> $500</p><a class="slider__link" href="#!">Apply now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide slider__slide"> 
+                                  <div class="slider__item"> <picture><source srcset="img/picture/need-seo.webp" type="image/webp"><img class="slider__icon" src="img/picture/need-seo.png" alt=""></picture>
+                                    <h3 class="slider__title">Need a SEO</h3>
+                                    <p class="slider__text">Need a SEO for our company who will let our company to a higher level</p>
+                                    <div class="slider__bottom"> 
+                                      <p class="slider__price">Highest bid<br> $500</p><a class="slider__link" href="#!">Apply now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide slider__slide"> 
+                                  <div class="slider__item"> <picture><source srcset="img/picture/logo-design.webp" type="image/webp"><img class="slider__icon" src="img/picture/logo-design.png" alt=""></picture>
+                                    <h3 class="slider__title">Logo Design#2</h3>
+                                    <p class="slider__text">Need a professional logo with writing underneath for our jewellery company</p>
+                                    <div class="slider__bottom"> 
+                                      <p class="slider__price">Highest bid<br> $500</p><a class="slider__link" href="#!">Apply now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide slider__slide"> 
+                                  <div class="slider__item"> <picture><source srcset="img/picture/graphic-design.webp" type="image/webp"><img class="slider__icon" src="img/picture/graphic-design.png" alt=""></picture>
+                                    <h3 class="slider__title">Graphic Design#2</h3>
+                                    <p class="slider__text">We need a graphic designer with UI/UX skills for our Furniture company</p>
+                                    <div class="slider__bottom"> 
+                                      <p class="slider__price">Highest bid<br> $500</p><a class="slider__link" href="#!">Apply now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide slider__slide"> 
+                                  <div class="slider__item"> <picture><source srcset="img/picture/need-seo.webp" type="image/webp"><img class="slider__icon" src="img/picture/need-seo.png" alt=""></picture>
+                                    <h3 class="slider__title">Need a SEO#2</h3>
+                                    <p class="slider__text">Need a SEO for our company who will let our company to a higher level</p>
+                                    <div class="slider__bottom"> 
+                                      <p class="slider__price">Highest bid<br> $500</p><a class="slider__link" href="#!">Apply now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slider__arrow slider__arrow--prev"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="slider__arrow slider__arrow--next"><i class="fa-solid fa-arrow-right"></i></div>
+                          </div>
+                        </div>
+                      </section>
             </main>
-      <footer></footer>
+            <footer class="footer"> 
+              <div class="container footer__container"> 
+                <div class="footer__top">
+                  <div class="footer-info"> <a class="footer-info__logo" href="/"><img src="img/icons/logo.svg" alt=""></a>
+                    <p class="footer-info__text">Powerful Freelance Marketplace System with ability to change the Users (Freelancers & Clients)</p>
+                  </div>
+                  <ul class="footer-list"> 
+                    <li class="footer-list__item">
+                      <h3 class="footer-list__title">For Clients </h3><a class="footer-list__value" href="/find-freelancers">Find Freelancers</a><a class="footer-list__value" href="/new-project">Post Project</a><a class="footer-list__value" href="/refund-policy">Refund Policy </a><a class="footer-list__value" href="/policy">Privacy Policy</a>
+                    </li>
+                    <li class="footer-list__item">
+                      <h3 class="footer-list__title">For Freelancers</h3><a class="footer-list__value" href="/find-work">Find Work</a><a class="footer-list__value" href="/login">Create Account</a>
+                    </li>
+                    <li class="footer-list__item">
+                      <h3 class="footer-list__title">Call Us</h3>
+                      <p class="footer-list__value footer-list__value--location">Kenya</p><a class="footer-list__value footer-list__value--phone" href="tel:+25470000000">+25470000000</a><a class="footer-list__value footer-list__value--email" href="mailto:bluelance@gmail.com">bluelance@gmail.com</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__bottom">2022 Spacelance. All right reserved</div>
+              </div>
+            </footer>
     </div>
+    <script src="js/app.min.js?_v=20220403143102"> </script>
   </body>
-  <script src="js/app.min.js?_v=20220401022508"> </script>
 </html>

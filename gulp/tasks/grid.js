@@ -7,7 +7,7 @@ export const grid = (done) => {
 		offset: "10px",
 		mobileFirst: true,
 		container: {
-			maxWidth: "1315px",
+			maxWidth: "1290px",
 			fields: "10px"
 		},
 		breakPoints: {

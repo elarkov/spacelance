@@ -1,0 +1,145 @@
+.best {
+  margin-bottom: 50px;
+  @include xl-block {
+    margin-bottom: 170px;
+  }
+  &__container {
+    @include sm-block {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__info {
+    margin-bottom: 40px;
+    @include sm-block {
+      max-width: 380px;
+      text-align: right;
+      order: 1;
+      margin-bottom: 0;
+    }
+    @include md-block {
+      max-width: 500px;
+    }
+  }
+  &__header {
+    max-width: 300px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 38px;
+    @include sm-block {
+      margin-left: auto;
+      font-size: 33px;
+      line-height: 50px;
+    }
+    @include md-block {
+      max-width: 480px;
+      font-size: 38px;
+      line-height: 54px;
+    }
+    @include xl-block {
+      max-width: 600px;
+      font-size: 56px;
+      line-height: 84px;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    color: $gray;
+    @include md-block {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include xl-block {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &-body {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+    @include sm-block {
+      max-width: 340px;
+      margin: 0;
+    }
+    @include md-block {
+      margin: 0;
+      max-width: 470px;
+    }
+    @include xl-block {
+      max-width: 620px;
+    }
+  }
+}
+
+.point {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  width: 100px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  @include md-block {
+    width: 140px;
+    height: 110px;
+    top: 7px;
+    right: 125px;
+  }
+  @include xl-block {
+    width: 162px;
+    height: 140px;
+    top: 50px;
+  }
+  &--big {
+    top: 90px;
+    right: 0;
+    width: 130px;
+    @include md-block {
+      width: 190px;
+      height: 120px;
+      top: 150px;
+      right: 0;
+    }
+    @include xl-block {
+      width: 300px;
+      height: 130px;
+      top: 220px;
+      right: -40px;
+    }
+  }
+  &__num {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: $accent;
+    @include md-block {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include xl-block {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $gray;
+    @include md-block {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include xl-block {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+}

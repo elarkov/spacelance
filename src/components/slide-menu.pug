@@ -4,17 +4,17 @@ mixin slide-menu()
       .side-menu__top
         a.logo.side-menu__logo(href="#!")
           img(src="img/icons/logo.svg", alt="")
-        a(href="#!").side-menu__close.js-side-menu__close Закрыть
+        button.side-menu__close.js-side-menu__close(type="button") Закрыть
       ul.menu.side-menu__menu 
         li.menu__item 
-          a(href="") Home
+          a(href="/") Home
         li.menu__item
-          a(href="") Find work
+          a(href="/find-work") Find work
         li.menu__item 
-          a(href="") Find Freelancers
+          a(href="/find-freelancers") Find Freelancers
         li.menu__item 
-          a(href="") Log In
+          a(href="/login") Log In
         li.menu__item 
-          a(href="") Sign Up
-      button.button.button--radius-50.side-menu__button Post a project
+          a(href="/sign-up") Sign Up
+      a.button.button--radius-50.side-menu__button(href="/new_project") Post a project
     .overlay__layer.js-side-menu__close

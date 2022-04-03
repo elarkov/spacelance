@@ -7,6 +7,11 @@
 @import 'vendors/smart-grid';
 @import 'vendors/swiper';
 
+//Fontawesome
+@import 'vendors/fontawesome/scss/fontawesome';
+@import 'vendors/fontawesome/scss/solid';
+@import 'vendors/fontawesome/scss/brands';
+
 
 // base 
 @import 
@@ -27,6 +32,8 @@
 @import 
     'layout/header',
     'layout/intro',
+    'layout/best',
+    'layout/works',
     'layout/footer';
 
 // pages

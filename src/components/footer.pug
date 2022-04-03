@@ -1,2 +1,25 @@
 mixin footer()
-    
+  footer.footer 
+    .container.footer__container 
+      .footer__top
+        .footer-info 
+          a.footer-info__logo(href="/")
+            img(src="img/icons/logo.svg", alt="") 
+          p.footer-info__text Powerful Freelance Marketplace System with ability to change the Users (Freelancers & Clients)
+        ul.footer-list 
+          li.footer-list__item
+            h3.footer-list__title For Clients 
+            a.footer-list__value(href="/find-freelancers") Find Freelancers
+            a.footer-list__value(href="/new-project") Post Project
+            a.footer-list__value(href="/refund-policy") Refund Policy 
+            a.footer-list__value(href="/policy") Privacy Policy
+          li.footer-list__item
+            h3.footer-list__title For Freelancers
+            a.footer-list__value(href="/find-work") Find Work
+            a.footer-list__value(href="/login") Create Account
+          li.footer-list__item
+            h3.footer-list__title Call Us
+            p.footer-list__value.footer-list__value--location Kenya
+            a.footer-list__value.footer-list__value--phone(href="tel:+25470000000") +25470000000
+            a.footer-list__value.footer-list__value--email(href="mailto:bluelance@gmail.com") bluelance@gmail.com
+      .footer__bottom 2022 Spacelance. All right reserved

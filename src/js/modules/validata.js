@@ -4,15 +4,12 @@ export function validateField() {
   allForms.forEach(function (form) {
     let validate = {
       text: null,
-      tel: null,
-      time: null,
       textNumberOfInputsInTheForm: 0,
     };
 
     const inputs = form.querySelectorAll("input");
     const inputSubmit = form.querySelector("button[type=submit]");
     const inputsText = form.querySelectorAll("input[type=text]");
-    const inputsTel = form.querySelectorAll("input[type=tel]");
 
     inputs.forEach(function (input) {
       if (input) {
@@ -36,24 +33,10 @@ export function validateField() {
                 }
               });
               break;
-            case "tel":
-              if (input.value.length > 15) {
-                validate.tel = true;
-              } else {
-                validate.tel = false;
-              }
-              break;
-            // case "time":
-            //   if (input.value.length > 3) {
-            //     validate.time = true;
-
-            //   } else {
-            //     validate.time = false;
-            //   }
             default:
               break;
           }
-          if (validate.tel && validate.text) {
+          if (validate.text) {
             inputSubmit.disabled = false;
           } else {
             inputSubmit.disabled = true;
@@ -64,11 +47,6 @@ export function validateField() {
           switch (inputType) {
             case "text":
               if (input.value.length < 2) {
-                input.classList.add("form-error");
-              }
-              break;
-            case "tel":
-              if (input.value.length < 16) {
                 input.classList.add("form-error");
               }
               break;

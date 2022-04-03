@@ -25,10 +25,16 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 958px;
+    height: 100%;
     background-image: url('../img/picture/bg-top.png');
     background-repeat: no-repeat;
     z-index:-1;
+    @include sm-block {
+      height: 30%;
+    }
+    @include xl-block {
+      height: 720px;
+    }
   }
 }
 

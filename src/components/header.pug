@@ -4,17 +4,17 @@ mixin header()
       a.logo.main-nav__logo(href="") 
         img.logo__pic(src="img/icons/logo.svg", alt="")
       ul.site-navigation.main-nav__navigation 
-        li.site-navigation__item.is-active 
-          a(href="") Home 
+        li.site-navigation__item
+          a(href="/") Home 
         li.site-navigation__item 
-          a(href="") Find work
+          a(href="/find-work") Find work
         li.site-navigation__item 
-          a(href="") Find Freelancers
+          a(href="/find-freelancers") Find Freelancers
         li.site-navigation__item 
-          a(href="") Log In
+          a(href="/login") Log In
         li.site-navigation__item 
-          a(href="") Sign Up
-      button.button.button--radius-50.main-nav__button Post a project
+          a(href="/sign-up") Sign Up
+      a.button.button--radius-50.main-nav__button(href="/new_project") Post a project
       .sandwich.main-nav__sandwich.js-side-menu(data-id="menu")
         .sandwich__inner
     

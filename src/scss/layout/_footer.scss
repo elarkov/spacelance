@@ -1,127 +1,139 @@
 .footer {
-  padding-top: 25px;
-  padding-bottom: 30px;
-  background: #232323;
-  &__container {
-    @include xl-block {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include xl-block {
+    padding-top: 130px;
+    padding-bottom: 85px;
+  }
+  &__top {
+    @include md-block {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
   }
-  &__logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    @include xl-block {
-      margin-bottom: 0;
-    }
-  }
-  &__logo-pic {
-    width: 130px;
-    flex: 0 0 130px;
-    display: block;
-    margin-right: 10px;
-    @include xl-block {
-      width: 145px;
-      flex: 0 0 145px;
-      margin-right: 23px;
-    }
-  }
-  &__slogan {
-    font-weight: 400;
+  &__bottom {
+    text-align: center;
     font-size: 14px;
-    line-height: 20px;
-    color: #FFFFFF;
+    color: $gray;
     @include xl-block {
-      width: 190px;
+      font-size: 18px;
     }
   }
-  &__rating {
-    width: 150px;
-    margin-bottom: 20px;
-    @include xl-block {
-      margin-bottom: 0;
+  &-info {
+    @include sm-block {
+      width: 300px;
     }
-  }
-  &__menu {
-    margin-bottom: 20px;
-    @include xl-block {
-      display: none;
-    }
-    a {
-      display: block;
-      margin-bottom: 8px;
+    &__text {
+      margin-bottom: 20px;
       font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 24px;
+      color: #252525;
+      @include xl-block {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+  }
+  &-list {
+    margin-bottom: 30px;
+    @include sm-block {
+      display: flex;
+    }
+    @include md-block {
+      margin-left: auto;
+    }
+    &__item {
+      margin-bottom: 20px;
+      @include sm-block {
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @include md-block {
+        margin-right: 70px;
+      }
+      @include xl-block {
+        margin-right: 100px;
+      }
       &:last-child {
         margin-bottom: 0;
       }
     }
-  }
-  &__messengers {
-    margin-bottom: 15px;
-    @include xl-block {
-      margin-bottom: 0;
-      display: flex;
-      align-items: center;
+    &__title {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #252525;
+      @include md-block {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
-    p {
-      margin-bottom: 5px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 14px;
-      text-align: left;
-      color: #fff;
+    &__value {
+      position: relative;
+      font-size: 16px;
+      line-height: 24px;
+      color: $text;
+      transition: 200ms ease;
       @include xl-block {
-        width: 128px;
-        margin-right: 25px;
+        font-size: 18px;
+        line-height: 27px;
       }
-    }
-  }
-  &__mesg-links {
-    display: flex;
-    align-items: center;
-    a {
-      display: block;
-      width: 33px;
-      height: 33px;
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0;
+      &:hover {
+        color: lighten($text, 10%);
+        text-decoration: underline;
       }
-    }
-  }
-  &__contacts {
-    p {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 14px;
-      text-align: left;
-      color: #CDCDCD;
-    }
-  }
-  &__phone {
-    position: relative;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 140%;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding-left: 40px;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
-      width: 26px;
-      height: 26px;
-      background-size: 26px;
-      background-image: url("../img/phone.png");
-      background-repeat: no-repeat;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+      }
+      &--location {
+        padding-left: 34px;
+        line-height: 34px;
+        @include xl-block {
+          line-height: 50px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        &:before {
+          background-image: url('../img/icons/icon-location.svg');
+        }
+      }
+      &--phone {
+        padding-left: 34px;
+        line-height: 34px;
+        @include xl-block {
+          line-height: 50px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        &:before {
+          background-image: url('../img/icons/icon-phone.svg');
+        }
+      }
+      &--email {
+        padding-left: 34px;
+        line-height: 34px;
+        @include xl-block {
+          line-height: 50px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        &:before {
+          background-image: url('../img/icons/icon-email.svg');
+        }
+      }
     }
   }
 }

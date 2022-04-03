@@ -5,7 +5,20 @@ mixin intro()
         h1.intro__header Are you looking for Freelancers?
         p.intro__subtitle Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
         .intro__bottom 
-          button.button.intro__button Hire a freelancer
-          form.search.intro__search(action="#")
-            input.search__input(type="text", placeholder="search freelance work") 
-            button.search__button(type="submit") Search
+          a.button.intro__button(href="/find-freelancers") Hire a freelancer
+          form.search.intro__search(action="#" method="get")
+            input.search__input(type="text", name="search" placeholder="search freelance work") 
+            button.search__button(type="submit" disabled) Search
+      ul.intro-list 
+        li.intro-list__item 
+          img.intro-list__icon(src="img/picture/icon-1.png", alt="")
+          h3.intro-list__header Create Account
+          p.intro-list__text First you have to create a account here
+        li.intro-list__item 
+          img.intro-list__icon(src="img/picture/icon-2.png", alt="")
+          h3.intro-list__header Search work 
+          p.intro-list__text Search the best freelance work here
+        li.intro-list__item 
+          img.intro-list__icon(src="img/picture/icon-3.png", alt="")
+          h3.intro-list__header Save and apply
+          p.intro-list__text Apply or save and start your work

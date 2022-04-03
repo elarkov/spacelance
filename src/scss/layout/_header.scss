@@ -70,13 +70,12 @@
       font-size: 20px;
       line-height: 30px;
       color: rgba(37, 37, 37, 0.7);
-    }
-    &.is-active {
-      a {
-        color: $accent;
-        font-weight: 500;
+      transition: text-shadow .3s;
+      &:hover {
+        text-shadow: 0 0 .65px $accent, 0 0 .65px $accent;
       }
     }
+   
   }
 }
 

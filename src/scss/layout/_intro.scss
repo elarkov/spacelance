@@ -1,9 +1,31 @@
 .intro {
+  position: relative;
   padding-top: 40px;
   overflow: hidden;
   @include md-block {
     padding-top: 120px;
-    padding-bottom: 175px;
+    padding-bottom: 80px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    z-index: -1;
+    left: 0;
+    background-image: url('../img/picture/decore-bg.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 432px;
+    background-size: 100%;
+    @include sm-block {
+      bottom: 140px;
+    }
+    @include md-block {
+      bottom: 80px;
+    }
+    @include xl-block {
+      bottom: 180px;
+    }
   }
   &__container {
     max-width: 1024px;
@@ -13,13 +35,19 @@
   }
   &__main {
     position: relative;
+    margin-bottom: 40px;
     @include sm-block {
       width: 740px;
       margin: auto;
+      margin-bottom: 90px;
     }
     @include md-block {
       width: 700px;
       margin: 0;
+      margin-bottom: 100px;
+    }
+    @include xl-block {
+      margin-bottom: 170px;
     }
     &:before {
       display: none;
@@ -95,9 +123,11 @@
     }
   }
   &__bottom {
+   
     @include sm-block {
       display: flex;
       align-items: center;
+     
     }
   }
   &__button {
@@ -114,6 +144,72 @@
       padding: 20px 10px;
       font-size: 24px;
       line-height: 36px;
+    }
+  }
+  &-list {
+    max-width: 355px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background: $white;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    @include sm-block {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    @include xl-block {
+      padding: 40px 75px;
+      justify-content: space-between;
+    }
+    &__item {
+      margin-bottom: 30px;
+      text-align: center;
+      @include sm-block {
+        @include col();
+        @include size(4);
+        margin-bottom: 0;
+      }
+      @include xl-block {
+        width: 305px;
+        margin: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__icon {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      margin-bottom: 15px;
+    }
+    &__header {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      @include xl-block {
+        font-size: 30px;
+        line-height: 45px;
+      }
+    }
+    &__text {
+      max-width: 220px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 25px;
+      color: $gray;
+      @include sm-block {
+        max-width: 240px;
+        margin: auto;
+      }
+      @include xl-block {
+        max-width: 100%;
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
   }
 }
@@ -155,6 +251,10 @@
     height: 50px;
     border-radius: 100%;
     background: $accent;
+    transition: 200ms ease;
+    &:hover {
+      background-color: lighten($accent, 5%);
+    }
     &:before {
       content: '';
       position: absolute;
